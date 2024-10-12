@@ -38,6 +38,7 @@ void main() {
   konversiSuhu(fahrenhait);
   inputForUser();
   pyramidPrint();
+  pyramidReversePrint();
 }
 
 void konversiSuhu(valueFahrenhait) {
@@ -62,6 +63,17 @@ String? pyramidPrint() {
   for (var i = 0; i <= totalRows; i++) {
     print('*' * i);
   }
+
+  return null;
+}
+
+String? pyramidReversePrint() {
+  int totalRows = 10;
+
+  do {
+    print('*' * totalRows);
+    totalRows--;
+  } while (totalRows >= 1);
 
   return null;
 }
