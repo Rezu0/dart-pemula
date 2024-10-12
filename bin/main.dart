@@ -12,9 +12,10 @@ void main() {
   ];
 
   int numberIndex = 3;
-  var resultFinal = (tryTemp[numberIndex] is Map && tryTemp[numberIndex].containsKey('text'))
-      ? tryTemp[numberIndex]['text']
-      : tryTemp[numberIndex];
+  var resultFinal =
+      (tryTemp[numberIndex] is Map && tryTemp[numberIndex].containsKey('text'))
+          ? tryTemp[numberIndex]['text']
+          : tryTemp[numberIndex];
 
   print(resultFinal);
 
@@ -27,12 +28,12 @@ void main() {
 
   print(dataSet);
 
-  tryTemp.forEach((item) {
+  for (var item in tryTemp) {
     if (item == 'Dicoding') {
       print('Testing bro');
     }
     print(item);
-  });
+  }
 
   konversiSuhu(fahrenhait);
   inputForUser();
