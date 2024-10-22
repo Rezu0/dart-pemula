@@ -1,6 +1,25 @@
 import 'dart:io';
+import 'package:konversi_suhu/class_animal.dart' as animal;
+// import 'package:konversi_suhu/class_user.dart';
 
 void main() {
+  var testingAnimal = animal.Animal.cat('Neko', 2.5);
+
+  testingAnimal.eat();
+  testingAnimal.poop();
+  testingAnimal.birthday();
+
+  print(
+      'Umur dari ${testingAnimal.nameGetter} adalah ${testingAnimal.age} Tahun, dan berat badannya ${testingAnimal.weight}');
+
+  // try {
+  //   var user = User('', '123456');
+  //   print('Login berhasil: ${user.username}');
+  // } catch (e) {
+  //   print(e);
+  // }
+
+  // BATAS AKHIR TESTING CLASS
   stdout.write("Masukan suhu dalam Fahrenheit: ");
   var fahrenhait = num.parse(stdin.readLineSync()!);
 
