@@ -7,7 +7,7 @@ class Animal {
   Animal(this._name, this._age, this._weight);
 
   // Named constructor 'cat'
-  Animal.cat(this._name, this._weight) : _age = 2 {}
+  Animal.cat(this._name, this._weight) : _age = 2;
 
   // Setter untuk name
   set name(String value) {
