@@ -1,18 +1,29 @@
 import 'dart:io';
 import 'package:konversi_suhu/class_animal.dart' as animal;
+import 'package:konversi_suhu/class_bird.dart';
 import 'package:konversi_suhu/class_cat.dart';
+import 'package:konversi_suhu/extensions.dart';
 // import 'package:konversi_suhu/class_user.dart';
 
 void main() {
+  var unsortedNumber = [2, 3, 6, 4, 5];
+  var sortedNumber = unsortedNumber.sortAsc();
+  print(sortedNumber);
+  // BATAS AKHIR DARI EXTENSION!
+
   var testingAnimal = animal.Animal.cat('Neko', 2.5);
   print(
       'Umur dari ${testingAnimal.nameGetter} adalah ${testingAnimal.age} Tahun, dan berat badannya ${testingAnimal.weight}');
 
   var testingCat = Cat('Grayson', 2, 2.2, 'Gray');
-  testingCat.walk();
-  testingCat.eat();
+  // testingCat.walk();
+  // testingCat.eat();
 
   print(testingCat.furColor);
+
+  var testingBird = Bird('Birdy', 2, 0.8, 'Gray');
+  testingBird.fly();
+  testingBird.eat();
 
   // try {
   //   var user = User('', '123456');
