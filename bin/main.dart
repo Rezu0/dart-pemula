@@ -2,10 +2,22 @@ import 'dart:io';
 import 'package:konversi_suhu/class_animal.dart' as animal;
 import 'package:konversi_suhu/class_bird.dart';
 import 'package:konversi_suhu/class_cat.dart';
+import 'package:konversi_suhu/class_future.dart';
 import 'package:konversi_suhu/extensions.dart';
 // import 'package:konversi_suhu/class_user.dart';
 
 void main() {
+  var getOrder = GetOrder();
+  getOrder.getOrder().then((value) {
+    print('Your ordered: $value');
+  }).catchError((error) {
+    print('Sorry, $error');
+  });
+
+  print('Getting your order, wait minute...');
+
+  getOrder.saveOrder();
+
   var unsortedNumber = [2, 3, 6, 4, 5];
   var sortedNumber = unsortedNumber.sortAsc();
   print(sortedNumber);
@@ -44,10 +56,9 @@ void main() {
   ];
 
   int numberIndex = 3;
-  var resultFinal =
-      (tryTemp[numberIndex] is Map && tryTemp[numberIndex].containsKey('text'))
-          ? tryTemp[numberIndex]['text']
-          : tryTemp[numberIndex];
+  var resultFinal = (tryTemp[numberIndex] is Map && tryTemp[numberIndex].containsKey('text'))
+      ? tryTemp[numberIndex]['text']
+      : tryTemp[numberIndex];
 
   print(resultFinal);
 
